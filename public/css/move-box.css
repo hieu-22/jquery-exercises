@@ -1,0 +1,27 @@
+.box::after {
+    content: "";
+    position: relative;
+    top: 80px;
+
+    display: block;
+    border-top: 25px solid white;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 50px solid transparent;
+}
+
+.route-box-right {
+    transform: rotate(-90deg);
+}
+
+.route-box-up {
+    transform: rotate(-0.5turn);
+}
+
+.route-box-left {
+    transform: rotate(0.25turn);
+}
+
+.route-box-down {
+    transform: rotate(-0.25turn);
+}
