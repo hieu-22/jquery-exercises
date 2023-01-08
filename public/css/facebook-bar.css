@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.facebook-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 55px;
+    height: 55px;
+    padding: 0 18px;
+
+    background-color: white;
+
+}
+
+.facebook-bar__left {
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+}
+
+.facebook-bar__center {
+    position: relative;
+    grid-column: 2/3;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.facebook-bar__center a {
+    color: #2E4F52
+}
+
+.facebook-bar__center .icon {
+    width: 120px;
+}
+
+.facebook-bar__center .icon::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: #1B74E4;
+}
+
+.facebook-bar__right {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.facebook-bar__right a {
+    color: #050505
+}
+
+.facebook-content {
+    background-color: #F0F2F5;
+    height: 100vh;
+}
+
+/* icon */
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+.facebook-bar__right .icon,
+.facebook-bar__center .icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook-bar__right .icon {
+    border: 1px solid #D8DADF;
+    border-radius: 50%;
+    background-color: #D8DADF;
+    margin-left: 10px;
+}
+
+.icon-menu {
+    font-size: 20px;
+}
+
+.icon-user img {
+    border-radius: 50%;
+}
+
+/* the f inside facebook logo */
+.white-f {
+    fill: white;
+}
+
+.searchBar-container {
+    position: relative;
+    margin-left: 10px;
+}
+
+.icon-search {
+    position: absolute;
+    left: 14px;
+    bottom: 9px;
+    transform: translateY(50%);
+    color: #65676B;
+    transition: .5s;
+
+}
+
+.icon_searchBar {
+    width: 240px;
+    height: 40px;
+    padding-left: 40px;
+    border: none;
+    border-radius: 50px;
+
+    font-size: 15px;
+    line-height: 40px;
+
+    background-color: #F0F2F5;
+}
+
+.makeWiderOnLeft {
+    outline: none;
+    animation: expand-to-left .3s forwards;
+}
+
+@keyframes to-left {
+    0%  {padding-left: 40px;}
+    100%  {padding-left: 20px;}
+}
+
+@keyframes to-left-off {
+    100%  {padding-left: 40px;}
+    0%  {padding-left: 20px;}
+}
+
+.hideSearchIcon {
+    animation: hide-search-icon .3s forwards;
+}
+
+@keyframes hide-search-icon {
+    0%  {left: 14px;}
+    100%  {left: 0; opacity: 0;}
+}
+
+@keyframes show-search-icon-back {
+    100%  {left: 14px;}
+    0%  {left: 0; opacity: 0;}
+}
+/* icon ends ---------------- */

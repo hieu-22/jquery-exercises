@@ -21,7 +21,3 @@
 .route-box-left {
     transform: rotate(0.25turn);
 }
-
-.route-box-down {
-    transform: rotate(-0.25turn);
-}
